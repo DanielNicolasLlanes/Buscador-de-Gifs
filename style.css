@@ -1,7 +1,9 @@
+/*se modifica el body agregandole un fono con degrade en circulo,
+ celeste desde el centro hasta azul en los bordes*/
 body{
     background-image: radial-gradient(circle, #7072bb, #0c00f7);
 }
-
+/*estilización del campo de texto*/
 input{
     margin-bottom: 10px;
     width: 80%;
@@ -9,33 +11,37 @@ input{
     font-size: 30px;
     border: 2px, solid, black;
     border-radius: 5px;
-    outline: none;
+    outline: none; /*eliminación del borde por defecto*/
 }
-
+/*estilización del boton*/
 button{
     width: 300px;
     height: 50px;
-    display: block;
-    margin: auto;
+    display: block; /*se muestra como bloque para que aparezca por debajo del campo de texto*/
+    margin: auto; /*se establecen margenes auto para que se posicione en el medio horizontalmente*/
     background-color: rgb(5, 5, 83);
     color: white;
     padding: 40px, 40px;
     font-size: 30px;
-    border: none;
+    border: none; /*se elimina el borde por defecto */
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;;
+    cursor: pointer; /*se indica que el cursor se muestre como una mano, para presionar el botón*/
+    transition: background-color 0.3s ease;; /*transición para cambiar el color mas suavemente*/
     margin-bottom: 10px;
 }
+
+/*estilización del botón al pasar el cursor por encima, se cambia de color el fondo*/
 button:hover{
     background-color: #3c3f97;
 }
-
+/*estilización del contenedor dentro del formulario, para que los elementos se posicionen
+en el centro horizontalmente y el texto también*/
 .div{
     width: auto;
     text-align: center;
 }
+/*estilización del contenedor de resultados*/
 #resultados{
-    display: grid;
-    grid-template-columns: repeat(3, auto);
+    display: grid; /*se muestra como una grilla*/
+    grid-template-columns: repeat(3, auto); /*se establece que la grilla tenga 3 columnas*/
 }
