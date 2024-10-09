@@ -59,9 +59,7 @@ function buscarGifs(){
     })
 }
 // se agrega un escuchador de eventos al botón de buscarGifs para que ejecute la función al hacerle click
-boton.addEventListener("click", () => {
-    buscarGifs()
-})
+boton.addEventListener("click", buscarGifs)
 
 // se agrega un escuchador de eventos al campo de texto para que al presionar la tecla enter
 document.getElementById("busqueda").addEventListener("keydown", function(event) {
