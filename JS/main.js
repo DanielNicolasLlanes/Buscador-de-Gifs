@@ -12,6 +12,9 @@ const llamada = (ak, termino) =>{
     return fetch(url)
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+
+
 //Elementos HTML que necesitamos para manipular el DOM
 const boton = document.getElementById("boton") // aquí se obtiene el elemento boton por su id 
 const resultados = document.getElementById("resultados") //aquí se obtiene el contenedor que guardará los resultados por si id
@@ -59,7 +62,11 @@ function buscarGifs(){
     })
 }
 // se agrega un escuchador de eventos al botón de buscarGifs para que ejecute la función al hacerle click
-boton.addEventListener("click", buscarGifs)
+boton.addEventListener("click", () => {
+    console.log("Botón cliqueado"); // Para verificar por consla si el botón es clicado correctamente
+    buscarGifs();
+});
+
 
 // se agrega un escuchador de eventos al campo de texto para que al presionar la tecla enter
 document.getElementById("busqueda").addEventListener("keydown", function(event) {
@@ -69,4 +76,4 @@ document.getElementById("busqueda").addEventListener("keydown", function(event) 
         buscarGifs();  // Llama a la función de búsqueda
     }
 });
-
+});
